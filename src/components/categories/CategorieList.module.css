@@ -3,10 +3,12 @@
   list-style: none;
   flex-direction: column;
   align-items: center;
-  margin-top: 0;
   margin-left: 11.8rem;
   padding: 0;
   width: 12rem;
+  position: absolute;
+  z-index: 2;
+  margin-top: 49px;
 }
 
 .hidden {
