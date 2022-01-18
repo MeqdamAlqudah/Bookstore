@@ -1,29 +1,37 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import classes from './Navigation.module.css';
 
 function Navigation() {
-  const [bookStyle, setBookStyle] = useState({
-    color: 'black', textDecoration: 'underline',
-  });
+  const [bookStyle, setBookStyle] = useState({});
+  useEffect(() => {
+    setBookStyle({ color: 'black', textDecoration: 'underline' });
+  }, []);
   const [categoriesStyle, setcategoriesStyle] = useState({});
-  const location = useLocation();
+
   const onClick = () => {
-    if (location.pathname === '/') {
+    if (categoriesStyle.color === 'black') {
       setBookStyle({
         color: 'black', textDecoration: 'underline',
       });
       setcategoriesStyle({});
-    } else if (location.pathname === '/Categories') {
+    } else {
       setcategoriesStyle({
         color: 'black', textDecoration: 'underline',
       });
       setBookStyle({});
     }
   };
+  const logoClickHandle = () => {
+    setBookStyle({
+      color: 'black', textDecoration: 'underline',
+    });
+    setcategoriesStyle({});
+  };
   return (
     <div>
       <ul className={classes.ul}>
+        <Link to="/" onClick={logoClickHandle}><h2 className={classes.h2}>Bookstore CMS</h2></Link>
         <Link to="/" style={bookStyle} onClick={onClick}>Books</Link>
         <Link to="/Categories" style={categoriesStyle} onClick={onClick}>Categories</Link>
       </ul>
