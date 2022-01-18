@@ -1,0 +1,11 @@
+.ul {
+  list-style: none;
+}
+
+.layout {
+  border: #e8e8e8 solid;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}

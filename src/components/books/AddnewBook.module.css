@@ -1,0 +1,73 @@
+.icon {
+  color: #c7c7c7;
+}
+
+.button {
+  color: #c7c7c7;
+  background: white;
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 17.813rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 11.8rem;
+}
+
+.button:only-child {
+  margin-left: 1px;
+}
+
+input.input {
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 25.5rem;
+  height: 1rem;
+  margin-right: 2rem;
+}
+
+.inputAuthor {
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 25.5rem;
+  height: 1rem;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.h1 {
+  color: rgba(136, 136, 136, 0.918);
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 6.25rem;
+}
+
+.addBook {
+  color: white;
+  background-color: #0290ff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  height: 3.2rem;
+  margin-left: 13px;
+  padding: 1rem;
+  width: 11rem;
+}
