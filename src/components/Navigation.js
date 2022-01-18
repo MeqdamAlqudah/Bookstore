@@ -1,16 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import classes from './Navigation.module.css';
 
 function Navigation() {
   const [bookStyle, setBookStyle] = useState({});
+  const location = useLocation();
+  const [categoriesStyle, setcategoriesStyle] = useState({});
   useEffect(() => {
     setBookStyle({ color: 'black', textDecoration: 'underline' });
+    if (location.pathname === '/Categories') {
+      setcategoriesStyle({
+        color: 'black', textDecoration: 'underline',
+      });
+      setBookStyle({});
+    }
   }, []);
-  const [categoriesStyle, setcategoriesStyle] = useState({});
-
   const onClick = () => {
-    if (categoriesStyle.color === 'black') {
+    if ((categoriesStyle.color === 'black')) {
       setBookStyle({
         color: 'black', textDecoration: 'underline',
       });
