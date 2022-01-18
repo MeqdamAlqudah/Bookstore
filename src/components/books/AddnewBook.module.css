@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 11.8rem;
 }
 
 .button:only-child {
@@ -24,7 +25,15 @@ input.input {
   padding: 1rem;
   width: 25.5rem;
   height: 1rem;
-  margin-right: 9rem;
+  margin-right: 2rem;
+}
+
+.inputAuthor {
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 25.5rem;
+  height: 1rem;
 }
 
 .div {
@@ -58,7 +67,7 @@ input.input {
   border: none;
   font-family: 'Montserrat', sans-serif;
   height: 3.2rem;
-  margin-left: 122px;
+  margin-left: 13px;
   padding: 1rem;
   width: 11rem;
 }

@@ -16,7 +16,13 @@ function Books() {
         <ul className={classes.ul}>
           {books.map((book) => (
             <div className={classes.layout} key={uuidv4()}>
-              <li>{book.title}</li>
+              <li>
+                {book.title}
+                {'\n '}
+                -
+                {' '}
+                <span>{book.author}</span>
+              </li>
               <button type="button" onClick={() => deleteHandler(book)}>Remove</button>
             </div>
           ))}

@@ -12,17 +12,22 @@ function AddnewBook() {
   const [categorie, setCategorie] = useState('');
   const bookTitle = useRef();
   const bookCategorie = useRef();
+  const bookAuthor = useRef();
   const onClick = () => {
     setHide(!hide);
   };
   const onSubmit = () => {
     const title = bookTitle.current.value;
     const enteredCategorie = categorie;
+    const author = bookAuthor.current.value;
     const id = uuidv4();
-    const newBook = { title, enteredCategorie, id };
+    const newBook = {
+      title, author, enteredCategorie, id,
+    };
     store.dispatch(addBook(newBook));
     setCategoryButton('Category');
     bookTitle.current.value = '';
+    bookAuthor.current.value = '';
   };
   const selectHandler = (e) => {
     setCategoryButton(e.target.name);
@@ -34,26 +39,27 @@ function AddnewBook() {
       <h1 className={classes.h1}>ADD NEW BOOK</h1>
       <form className={classes.form}>
         <input type="text" name="add-book" placeholder="Book title" className={classes.input} ref={bookTitle} />
-        <div className={classes.div}>
-          <button type="button" className={classes.button} name="Category" onClick={onClick} ref={bookCategorie}>
-            {categoryButton}
-            {hide ? (
-              <FaCaretUp className={
-                classes.icon
-              }
-              />
-            ) : (
-              <FaCaretDown className={
-                classes.icon
-              }
-              />
-            )}
-
-          </button>
-          <CategoriesList hide={hide} selectHandler={selectHandler} />
-        </div>
+        <input type="text" name="add-book" placeholder="Author" className={classes.inputAuthor} ref={bookAuthor} />
         <button type="button" className={classes.addBook} onClick={onSubmit}>ADD BOOK</button>
       </form>
+      <div className={classes.div}>
+        <button type="button" className={classes.button} name="Category" onClick={onClick} ref={bookCategorie}>
+          {categoryButton}
+          {hide ? (
+            <FaCaretUp className={
+              classes.icon
+            }
+            />
+          ) : (
+            <FaCaretDown className={
+              classes.icon
+            }
+            />
+          )}
+
+        </button>
+        <CategoriesList hide={hide} selectHandler={selectHandler} />
+      </div>
     </div>
   );
 }
