@@ -1,5 +1,8 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const fetchData = 'bookStore/books/fetchBooks';
+
+// const getCurrentBooks = 'GET_CURRENT_Books';
 
 const initialState = [];
 
@@ -13,7 +16,13 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+export const getBooks = (payload) => ({
+  type: fetchData,
+  payload,
+});
+
 // books.js
+let counter = 0;
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -25,13 +34,12 @@ const reducer = (state = initialState, action) => {
       */
       return [...state, action.payload];
     case REMOVE_BOOK:
-      /*
-      use ES6 filter() method to create a new array,
-       which will not contain the book you want to remove
-        from the store (filter by the id key - i.e.:
-      return state.filter(book => book.id !== id);
-      */
       return state.filter((book) => book.id !== action.payload.id);
+    case fetchData:
+      return [...state, ...Object.values(action.payload).map((el) => {
+        counter += 1;
+        return { ...el, id: `item${counter}` };
+      })];
     default:
       return state;
   }
