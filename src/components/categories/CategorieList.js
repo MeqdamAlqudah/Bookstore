@@ -9,6 +9,7 @@ function CategoriesList(props) {
       <button type="button" name="Action" onClick={selectHandler}>Action</button>
       <button type="button" name="Science Fiction" onClick={selectHandler}>Science Fiction</button>
       <button type="button" name="Economy" onClick={selectHandler}>Economy</button>
+      <button type="button" name="Economy" onClick={selectHandler}>Classics</button>
     </ul>
   );
 }

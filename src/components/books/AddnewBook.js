@@ -1,6 +1,6 @@
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa';
 import { useState, useRef } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import classes from './AddnewBook.module.css';
 import CategoriesList from '../categories/CategorieList';
 import { addBook } from '../../redux/books/books';
@@ -8,6 +8,7 @@ import store from '../../redux/configureStore';
 
 function AddnewBook() {
   const [categoryButton, setCategoryButton] = useState('Category');
+  const books = useSelector((state) => state.booksReducer);
   const [hide, setHide] = useState(false);
   const [categorie, setCategorie] = useState('');
   const bookTitle = useRef();
@@ -20,10 +21,10 @@ function AddnewBook() {
     const title = bookTitle.current.value;
     const enteredCategorie = categorie;
     const author = bookAuthor.current.value;
-    const id = uuidv4();
-    const newBook = {
-      title, author, enteredCategorie, id,
-    };
+    const id = `item${books.length + 1}`;
+    const newBook = [{
+      title, author, category: enteredCategorie, id,
+    }];
     store.dispatch(addBook(newBook));
     setCategoryButton('Category');
     bookTitle.current.value = '';
