@@ -2,6 +2,11 @@
   color: #c7c7c7;
 }
 
+.error {
+  color: red;
+  font-size: 10px;
+}
+
 .button {
   color: #c7c7c7;
   background: white;
@@ -23,7 +28,7 @@ input.input {
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 25.5rem;
+  width: 18.5rem;
   height: 1rem;
   margin-right: 2rem;
 }
@@ -32,7 +37,7 @@ input.input {
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 25.5rem;
+  width: 18.5rem;
   height: 1rem;
 }
 
@@ -70,4 +75,94 @@ input.input {
   margin-left: 13px;
   padding: 1rem;
   width: 11rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-left: 1.25rem;
+  }
+
+  .input.input {
+    width: 15.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputAuthor {
+    width: 15.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .addBook {
+    margin: 54px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-left: 1.25rem;
+    align-items: center;
+  }
+
+  .input.input {
+    width: 15.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputAuthor {
+    width: 15.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .addBook {
+    margin: 54px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-left: 1.25rem;
+    align-items: center;
+  }
+
+  .input.input {
+    width: 15.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputAuthor {
+    width: 15.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .addBook {
+    margin: 54px;
+  }
+
+  .button {
+    margin-left: -0.1999999999999993rem;
+  }
 }

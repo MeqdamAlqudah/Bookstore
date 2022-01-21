@@ -21,6 +21,7 @@ export const getBooks = (payload) => ({
   payload,
 });
 
+let flag = false;
 // books.js
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -29,7 +30,12 @@ const reducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
     case fetchData:
-      return [...state, ...Object.entries(action.payload).map((el) => ({ ...el[1], id: `${el[0]}` }))];
+      if (!flag) {
+        flag = true;
+        return [...state, ...Object.entries(action.payload).map((el) => ({ ...el[1], id: `${el[0]}` }))];
+      }
+      return state;
+
     default:
       return state;
   }

@@ -18,7 +18,6 @@ ReactDOM.render(
           exact
           element={(
             <Provider store={store}>
-
               <Books />
 
             </Provider>

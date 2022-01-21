@@ -7,6 +7,11 @@
   padding-right: 31rem;
 }
 
+.hide,
+.hideMenu {
+  display: none;
+}
+
 .ul a {
   color: #c3c3c3;
   text-decoration: none;
@@ -23,4 +28,75 @@
 .h2 {
   font-family: 'Montserrat', sans-serif;
   color: #0290ff;
+}
+
+@media only screen and (max-width: 500px) {
+  .desktopStuf {
+    display: none;
+  }
+
+  .mobile {
+    margin-left: 5rem;
+  }
+
+  .h2 {
+    margin-left: 9px;
+  }
+
+  .ul {
+    padding-right: 0;
+    padding-left: 0;
+    justify-content: flex-start;
+    width: 32rem;
+  }
+
+  .hide {
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+  }
+
+  .menu a:link,
+  .menu a:visited {
+    padding: 1rem;
+    color: #c3c3c3;
+    border: #e8e8e8 solid;
+    border-width: 0.5px;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile {
+    margin-left: 5rem;
+  }
+
+  .h2 {
+    margin-left: 9px;
+  }
+
+  .ul {
+    padding-right: 0;
+    padding-left: 0;
+    width: 32rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+  }
+
+  .menu a:link,
+  .menu a:visited {
+    padding: 1rem;
+    color: #c3c3c3;
+    border: #e8e8e8 solid;
+    border-width: 0.5px;
+    text-decoration: none;
+  }
 }

@@ -2,10 +2,153 @@
   list-style: none;
 }
 
+.author {
+  color: #4386bf;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.category {
+  color: #c3c3c3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+}
+
+.title {
+  color: black;
+  font-size: 1.375rem;
+  font-family: 'Roboto Slab', serif;
+}
+
 .layout {
-  border: #e8e8e8 solid;
-  border-radius: 1rem;
-  background-color: white;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin: 3rem;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding: 3rem 0.188rem 2.625rem 0.688rem;
+}
+
+.removeButton {
+  width: 3.375rem;
+  height: 1.188rem;
+  border: none;
+  color: #4386bf;
+  background: transparent;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress {
+  width: 7rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  color: #c3c3c3;
+}
+
+.percentage {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 425px) {
+  .ul {
+    padding-left: 1px;
+  }
+
+  .percentage {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .container {
+    margin-top: 4rem;
+  }
+
+  .category {
+    color: #c3c3c3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+  }
+
+  .title {
+    color: black;
+    font-size: 1.375rem;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .layout {
+    padding: 1rem 0.188rem 0.625rem 0.688rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .removeButton {
+    width: 3.375rem;
+    height: 1.188rem;
+    border: none;
+    color: #4386bf;
+    background: transparent;
+  }
+
+  .progress {
+    width: 5rem;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ul {
+    padding-left: 1px;
+  }
+
+  .percentage {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .container {
+    margin-top: 4rem;
+  }
+
+  .category {
+    color: #c3c3c3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+  }
+
+  .title {
+    color: black;
+    font-size: 1.375rem;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .layout {
+    padding: 1rem 0.188rem 0.625rem 0.688rem;
+    align-items: center;
+  }
+
+  .progress {
+    width: 5rem;
+    height: 40px;
+  }
+
+  .removeButton {
+    width: 3.375rem;
+    height: 1.188rem;
+    border: none;
+    color: #4386bf;
+    background: transparent;
+  }
 }

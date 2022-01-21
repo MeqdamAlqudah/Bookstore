@@ -6,9 +6,8 @@
   margin-left: 11.8rem;
   padding: 0;
   width: 12rem;
-  position: absolute;
   z-index: 2;
-  margin-top: 49px;
+  margin-top: 0;
 }
 
 .hidden {
@@ -26,4 +25,10 @@
   justify-content: center;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .ul {
+    margin-left: -0.1999999999999993rem;
+  }
 }
