@@ -9,7 +9,7 @@ import Navigation from './components/Navigation';
 import store from './redux/configureStore';
 
 ReactDOM.render(
-  <div>
+  <div className="container">
     <BrowserRouter>
       <Navigation />
       <Routes>

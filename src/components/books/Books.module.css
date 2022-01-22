@@ -53,6 +53,11 @@
   justify-content: space-around;
 }
 
+.container {
+  box-shadow: 0 0 60px 0 #f5f6fa;
+  background-color: #f5f6fa;
+}
+
 .text {
   color: #c3c3c3;
 }

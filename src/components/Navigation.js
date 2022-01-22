@@ -41,7 +41,7 @@ function Navigation() {
     setHideMenu(!hideMenu);
   };
   return (
-    <div>
+    <div className={classes.navigation}>
       <ul className={classes.ul}>
         <Link to="/" onClick={logoClickHandle}><h2 className={classes.h2}>Bookstore CMS</h2></Link>
         <div className={classes.mobile}>
