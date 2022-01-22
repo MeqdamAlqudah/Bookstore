@@ -18,8 +18,8 @@ function Navigation() {
       setBookStyle({});
     }
   }, []);
-  const onClick = () => {
-    if ((categoriesStyle.color === 'black')) {
+  const onClick = (e) => {
+    if ((e.target.innerText === 'Books')) {
       setBookStyle({
         color: 'black', textDecoration: 'underline',
       });
