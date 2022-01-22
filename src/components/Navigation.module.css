@@ -79,7 +79,7 @@
   .menu {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #f7f3f3;
   }
 
   .menu a:link,
@@ -119,7 +119,7 @@
   .menu {
     display: flex;
     flex-direction: column;
-    background-color: #efefef;
+    background-color: #f7f3f3;
   }
 
   .menu a:link,
