@@ -13,7 +13,7 @@ const reducer = combineReducers({
   // additional reducers could be added here
 });
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/E4bjWt5QcRLbdZr2MWRM/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/olzSLHJZ1Ar07qIUABH0/books';
 const fetchBooksMiddleware = (storeAPI) => (next) => (action) => {
   if (action.type === getDataFromApi) {
     // Make an API call to fetch Book from the server

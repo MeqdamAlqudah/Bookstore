@@ -7,6 +7,7 @@ import { addBook } from '../../redux/books/books';
 import store from '../../redux/configureStore';
 
 function AddnewBook() {
+  const [errorTextContent, setErrorTextContent] = useState('');
   const [categoryButton, setCategoryButton] = useState('Category');
   const books = useSelector((state) => state.booksReducer);
   const [hide, setHide] = useState(false);
@@ -17,18 +18,27 @@ function AddnewBook() {
   const onClick = () => {
     setHide(!hide);
   };
-  const onSubmit = () => {
+  const onSubmit = (e) => {
     const title = bookTitle.current.value;
     const enteredCategorie = categorie;
     const author = bookAuthor.current.value;
-    const id = `item${books.length + 1}`;
-    const newBook = [{
-      title, author, category: enteredCategorie, id,
-    }];
-    store.dispatch(addBook(newBook));
-    setCategoryButton('Category');
-    bookTitle.current.value = '';
-    bookAuthor.current.value = '';
+    if ((!author.length) || (!title.length) || (!enteredCategorie.length)) {
+      e.preventDefault();
+      setErrorTextContent('Please make sure you entered the title,author and Category ');
+    } else if (author.length > 20 || title.length > 20) {
+      e.preventDefault();
+      setErrorTextContent('Your allowed with 20 letter author and title text length');
+    } else {
+      setErrorTextContent('');
+      const id = `item${books.length + 1}`;
+      const newBook = [{
+        title, author, category: enteredCategorie, id,
+      }];
+      store.dispatch(addBook(newBook));
+      setCategoryButton('Category');
+      bookTitle.current.value = '';
+      bookAuthor.current.value = '';
+    }
   };
   const selectHandler = (e) => {
     setCategoryButton(e.target.name);
@@ -38,29 +48,31 @@ function AddnewBook() {
   return (
     <div className={classes.container}>
       <h1 className={classes.h1}>ADD NEW BOOK</h1>
+      <p className={classes.error}>{errorTextContent}</p>
       <form className={classes.form}>
         <input type="text" name="add-book" placeholder="Book title" className={classes.input} ref={bookTitle} />
         <input type="text" name="add-book" placeholder="Author" className={classes.inputAuthor} ref={bookAuthor} />
+        <div className={classes.div}>
+          <button type="button" className={classes.button} name="Category" onClick={onClick} ref={bookCategorie}>
+            {categoryButton}
+            {hide ? (
+              <FaCaretUp className={
+                classes.icon
+              }
+              />
+            ) : (
+              <FaCaretDown className={
+                classes.icon
+              }
+              />
+            )}
+
+          </button>
+          <CategoriesList hide={hide} selectHandler={selectHandler} />
+        </div>
         <button type="button" className={classes.addBook} onClick={onSubmit}>ADD BOOK</button>
       </form>
-      <div className={classes.div}>
-        <button type="button" className={classes.button} name="Category" onClick={onClick} ref={bookCategorie}>
-          {categoryButton}
-          {hide ? (
-            <FaCaretUp className={
-              classes.icon
-            }
-            />
-          ) : (
-            <FaCaretDown className={
-              classes.icon
-            }
-            />
-          )}
 
-        </button>
-        <CategoriesList hide={hide} selectHandler={selectHandler} />
-      </div>
     </div>
   );
 }

@@ -6,9 +6,8 @@
   margin-left: 11.8rem;
   padding: 0;
   width: 12rem;
-  position: absolute;
   z-index: 2;
-  margin-top: 49px;
+  margin-top: 0;
 }
 
 .hidden {
@@ -20,10 +19,16 @@
   margin: 0;
   border: #e8e8e8 solid;
   border-width: 0.5px;
-  width: 17.6rem;
+  width: 9.812999999999999rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .ul {
+    margin-left: -0.1999999999999993rem;
+  }
 }
