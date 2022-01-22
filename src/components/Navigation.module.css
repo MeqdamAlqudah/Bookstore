@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.menu {
+  display: none;
+}
+
 .navigation {
   border: solid 1px #e8e8e8;
   background-color: white;
@@ -114,12 +118,6 @@
     padding-right: 0;
     padding-left: 0;
     width: 32rem;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #f7f3f3;
   }
 
   .menu a:link,
