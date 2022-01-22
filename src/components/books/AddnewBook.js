@@ -52,26 +52,27 @@ function AddnewBook() {
       <form className={classes.form}>
         <input type="text" name="add-book" placeholder="Book title" className={classes.input} ref={bookTitle} />
         <input type="text" name="add-book" placeholder="Author" className={classes.inputAuthor} ref={bookAuthor} />
+        <div className={classes.div}>
+          <button type="button" className={classes.button} name="Category" onClick={onClick} ref={bookCategorie}>
+            {categoryButton}
+            {hide ? (
+              <FaCaretUp className={
+                classes.icon
+              }
+              />
+            ) : (
+              <FaCaretDown className={
+                classes.icon
+              }
+              />
+            )}
+
+          </button>
+          <CategoriesList hide={hide} selectHandler={selectHandler} />
+        </div>
         <button type="button" className={classes.addBook} onClick={onSubmit}>ADD BOOK</button>
       </form>
-      <div className={classes.div}>
-        <button type="button" className={classes.button} name="Category" onClick={onClick} ref={bookCategorie}>
-          {categoryButton}
-          {hide ? (
-            <FaCaretUp className={
-              classes.icon
-            }
-            />
-          ) : (
-            <FaCaretDown className={
-              classes.icon
-            }
-            />
-          )}
 
-        </button>
-        <CategoriesList hide={hide} selectHandler={selectHandler} />
-      </div>
     </div>
   );
 }

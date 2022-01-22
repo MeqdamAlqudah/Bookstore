@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FiMenu } from 'react-icons/fi';
+import { IoIosPerson } from 'react-icons/io';
 import classes from './Navigation.module.css';
 
 function Navigation() {
@@ -49,8 +50,14 @@ function Navigation() {
         </div>
         <Link to="/" className={classes.desktopStuf} style={bookStyle} onClick={onClick}>Books</Link>
         <Link to="/Categories" className={classes.desktopStuf} style={categoriesStyle} onClick={onClick}>Categories</Link>
+        <div className={classes.personDesktop}>
+          <IoIosPerson className={classes.personIcon} />
+        </div>
       </ul>
       <div className={!hideMenu ? classes.hideMenu : classes.menu}>
+        <div className={classes.person}>
+          <IoIosPerson className={classes.personIcon} />
+        </div>
         <Link to="/" style={bookStyle} onClick={onClick}>Books</Link>
         <Link to="/Categories" style={categoriesStyle} onClick={onClick}>Categories</Link>
       </div>

@@ -55,7 +55,11 @@ function Books() {
                   </div>
                 )}
               </ProgressProvider>
-
+              <div className={classes.UpdateProgress}>
+                <span>CURRENT CHAPTER</span>
+                <span className={classes.updateCurrentChapter}>Chapter 17</span>
+                <button type="button">UPDATE PROGRESS</button>
+              </div>
             </div>
           )) : <li />}
         </ul>

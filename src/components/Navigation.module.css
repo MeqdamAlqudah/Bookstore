@@ -11,6 +11,24 @@
   background-color: white;
 }
 
+.person {
+  background-color: white;
+  border: solid 1px #c3c3c3;
+  border-radius: 58px;
+  padding: 1rem;
+}
+
+.personIcon {
+  color: #0290ff;
+}
+
+.personDesktop {
+  background-color: white;
+  border: solid 1px #c3c3c3;
+  border-radius: 58px;
+  padding: 1rem;
+}
+
 .hide,
 .hideMenu {
   display: none;
@@ -71,6 +89,15 @@
     border: #e8e8e8 solid;
     border-width: 0.5px;
     text-decoration: none;
+  }
+
+  .person {
+    width: 1rem;
+    margin: 1rem;
+  }
+
+  .personDesktop {
+    display: none;
   }
 }
 

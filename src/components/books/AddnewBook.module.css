@@ -13,12 +13,12 @@
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 17.813rem;
+  width: 9.812999999999999rem;
   display: flex;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
-  margin-left: 11.8rem;
   margin-bottom: 1rem;
+  margin-left: 12rem;
 }
 
 .button:only-child {
@@ -29,7 +29,7 @@ input.input {
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 18.5rem;
+  width: 7.5rem;
   height: 1rem;
   margin-right: 2rem;
 }
@@ -38,7 +38,7 @@ input.input {
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 18.5rem;
+  width: 6.5rem;
   height: 1rem;
 }
 
@@ -51,7 +51,8 @@ input.input {
 
 .form {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .h1 {
@@ -73,14 +74,24 @@ input.input {
   border: none;
   font-family: 'Montserrat', sans-serif;
   height: 3.2rem;
-  margin-left: 13px;
+  margin-left: 165px;
   padding: 1rem;
   width: 11rem;
 }
 
 @media only screen and (max-width: 375px) {
+  .button {
+    margin-left: 0;
+  }
+
   .form {
     flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .div {
+    align-items: center;
   }
 
   .container {
@@ -107,8 +118,14 @@ input.input {
 }
 
 @media only screen and (max-width: 425px) {
+  .button {
+    margin-left: 0;
+  }
+
   .form {
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .container {
@@ -136,8 +153,14 @@ input.input {
 }
 
 @media only screen and (max-width: 768px) {
+  .button {
+    margin-left: 0;
+  }
+
   .form {
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .container {
@@ -163,7 +186,7 @@ input.input {
     margin: 54px;
   }
 
-  .button {
+  /* .button {
     margin-left: -0.1999999999999993rem;
-  }
+  } */
 }

@@ -2,6 +2,36 @@
   list-style: none;
 }
 
+.UpdateProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UpdateProgress span:first-child {
+  font-size: 0.813rem;
+  color: #c3c3c3;
+  font-family: 'Roboto Slab', serif;
+}
+
+.updateCurrentChapter {
+  color: black;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+}
+
+.UpdateProgress button {
+  width: 11.5rem;
+  height: 2.063rem;
+  color: white;
+  margin: 0.75rem 0 0.563rem 0.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border-style: none;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+}
+
 .author {
   color: #4386bf;
   font-family: 'Montserrat', sans-serif;
@@ -51,6 +81,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border-right: solid #e8e8e8;
+  border-width: 0.125rem;
+  padding-right: 1rem;
 }
 
 .container {
@@ -107,9 +140,14 @@
     background: transparent;
   }
 
+  .UpdateProgress {
+    display: none;
+  }
+
   .progress {
     width: 5rem;
     height: 40px;
+    border: none;
   }
 }
 
@@ -145,8 +183,11 @@
   }
 
   .progress {
-    width: 5rem;
-    height: 40px;
+    border: none;
+  }
+
+  .UpdateProgress {
+    display: none;
   }
 
   .removeButton {
