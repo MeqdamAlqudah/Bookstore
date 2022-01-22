@@ -29,7 +29,7 @@ input.input {
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 7.5rem;
+  width: 15.5rem;
   height: 1rem;
   margin-right: 2rem;
 }
@@ -38,7 +38,7 @@ input.input {
   border: #e8e8e8 solid;
   border-width: 0.5px;
   padding: 1rem;
-  width: 6.5rem;
+  width: 15.5rem;
   height: 1rem;
 }
 
@@ -54,6 +54,7 @@ input.input {
   flex-wrap: wrap;
   align-items: flex-start;
   margin-bottom: 9rem;
+  width: 85%;
 }
 
 .h1 {
@@ -100,14 +101,14 @@ input.input {
   }
 
   .input.input {
-    width: 15.5rem;
+    width: 13.5rem;
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
   .inputAuthor {
-    width: 15.5rem;
+    width: 13.5rem;
     margin: auto;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -135,14 +136,14 @@ input.input {
   }
 
   .input.input {
-    width: 15.5rem;
+    width: 13.5rem;
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
   .inputAuthor {
-    width: 15.5rem;
+    width: 13.5rem;
     margin: auto;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -153,7 +154,7 @@ input.input {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 430px) {
   .button {
     margin-left: 0;
   }
